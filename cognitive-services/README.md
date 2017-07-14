@@ -1,8 +1,8 @@
 # Face Detection & Recognition 
 
-* Android sample uses Google's Mobile Vision APIs for face detection and Microsoft Cognitive Services for Recognition.
-* iOS samples use CIDetector and CIFeature for Face Detection and Microsoft Cognitive Services for Recognitio
+* Os exemplos do Android usam a API de Mobile Google Vision para detecção de rosto e Serviços Cognitivos Microsoft para Reconhecimento.
+* Os exemplos do iOS usam CIDetector e CIFeature para Detecção de Rosto e Microsoft Cognitive Services for Recognition.
 
-Microsoft Cognitive Services Client APIs and Helpers were reused from this [sample](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk)
+As APIs da Microsoft Cognitive Services Client foram reutilizados a partir deste [exemplo] [sample](https://github.com/Microsoft/Cognitive-Samples-IntelligentKiosk)
 
-> Note: The demo samples use Face Registration in the load method of the app. Do not use that in your production. The best place to use them is in the user registration page. 
+> Note: Os exemplos de demonstração usam Face Registration no método de carga do aplicativo. Não use isso na sua produção. O melhor lugar para usá-los está na página de registro do usuário. 
