@@ -1,4 +1,4 @@
-[OUTDATED] CROSS PLATFORM NFC [![Build Status](https://travis-ci.org/RedFroggy/ionic2-nfc-app.svg?branch=master)](https://travis-ci.org/RedFroggy/ionic2-nfc-app)
+CROSS PLATFORM NFC
 ==========
 
 # Presentation
@@ -10,7 +10,7 @@ An NFC Reader application based on ionic2 and TypeScript (ES6)
 ![image](http://i.imgur.com/PL38LTB.png?1)
 
 # IDE
-IntelliJ v15.0.3 or later is recommended for a better TypeScript support
+Visual Studio Code, Webstorm or later is recommended for a better TypeScript support
 
 # Features
 - JWT authentication
