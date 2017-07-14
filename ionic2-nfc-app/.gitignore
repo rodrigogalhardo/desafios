@@ -1,0 +1,16 @@
+node_modules/
+www/build/
+platforms/
+plugins/
+.idea/
+reports/
+coverage/
+doc/
+typings/
+*.iml
+app/**/*.js
+app/**/*.js.map
+www/spec/**/*.js
+www/spec/**/*.js.map
+npm-debug.log
+ionic.config.js
