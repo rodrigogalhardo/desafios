@@ -142,6 +142,10 @@ function startRecording(stream) {
 //  console.log('Source buffer: ', sourceBuffer);
 //}
 
+recBtn.addEventListener('click', onBtnRecordClicked);
+pauseRes.addEventListener('click', onPauseResumeClicked);
+stop.addEventListener('click', onBtnStopClicked);
+
 function onBtnRecordClicked() {
     if (typeof MediaRecorder === 'undefined' || !navigator.getUserMedia) {
         alert('MediaRecorder not supported on your browser, use Firefox 30 or Chrome 49 instead.');

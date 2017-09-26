@@ -31,9 +31,9 @@
             <br/> Quanto minutos é seu video?<input type="number" id="durationLimit" value>
             <br/> Tempo restante: <strong id="limitRestante"></strong>
             <video controls autoplay></video><br>
-            <button id="rec" onclick="onBtnRecordClicked()">Record</button>
-            <button id="pauseRes" onclick="onPauseResumeClicked()" disabled>Pause</button>
-            <button id="stop" onclick="onBtnStopClicked()" disabled>Stop</button>
+            <button id="rec" type="button">Record</button>
+            <button id="pauseRes" type="button" disabled>Pause</button>
+            <button id="stop" disabled>Stop</button>
         </div>
         <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
         <p id="data"></p>
