@@ -105,7 +105,7 @@ function startRecording(stream) {
     mediaRecorder.onstop = function() {
         log('Stopped  & state = ' + mediaRecorder.state);
 
-        var blob = new Blob(chunks, { type: "video/webm" });
+        var blob = new Blob(chunks, { type: "video/mpeg" });
         chunks = [];
 
         var videoURL = window.URL.createObjectURL(blob);
@@ -115,7 +115,8 @@ function startRecording(stream) {
         downloadLink.innerHTML = 'Download video file';
 
         var rand = Math.floor((Math.random() * 10000000));
-        var name = "video_" + rand + ".webm";
+        //var name = "video_" + rand + ".webm";
+        var name = "video_" + rand + ".mpeg";
 
         downloadLink.setAttribute("download", name);
         downloadLink.setAttribute("name", name);
@@ -144,7 +145,7 @@ function startRecording(stream) {
 
 recBtn.addEventListener('click', onBtnRecordClicked);
 pauseRes.addEventListener('click', onPauseResumeClicked);
-stop.addEventListener('click', onBtnStopClicked);
+stopBtn.addEventListener('click', onBtnStopClicked);
 
 function onBtnRecordClicked() {
     if (typeof MediaRecorder === 'undefined' || !navigator.getUserMedia) {
