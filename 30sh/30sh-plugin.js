@@ -87,6 +87,19 @@ function startRecording(stream) {
 
     mediaRecorder.onstart = function() {
         log('Started & state = ' + mediaRecorder.state);
+
+        timeout = setInterval(function() {
+            if (videoElement.readyState > 0) {
+                var duration = document.getElementById("limitRestante");
+                var limit = document.getElementById("durationLimit").value;
+                limit = (limit / 60);
+                duration.innerText = 'video is ' + Math.round(videoElement.duration - limit) + ' seconds';
+                if (videoElement.duration === limit) {
+                    mediaRecorder.onstop();
+                }
+                clearInterval(timeout);
+            }
+        }, 500);
     };
 
     mediaRecorder.onstop = function() {
@@ -119,6 +132,8 @@ function startRecording(stream) {
     mediaRecorder.onwarning = function(e) {
         log('Warning: ' + e);
     };
+
+
 }
 
 //function handleSourceOpen(event) {
