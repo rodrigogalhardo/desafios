@@ -1,5 +1,5 @@
 {
-  "name": "apechincha.com.br",
+  "name": "v1",
   "private": true,
   "scripts": {
     "start": "meteor run"
