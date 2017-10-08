@@ -1,0 +1,27 @@
+# osx
+.DS_Store
+
+# IDE
+.project
+.pydevproject
+
+# examples
+*.phar
+*.lock
+composer.json
+php.ini
+vendor
+
+# Dependency-related directories
+node_modules
+bower_components
+
+# Build-related
+*.log
+package-lock.json
+dist/
+dist-test/
+docs/
+es5/
+tmp
+coverage/
