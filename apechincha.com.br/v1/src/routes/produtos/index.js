@@ -1,7 +1,7 @@
 import express from 'express'
-import landing from './../../services/landing/'
+import produtos from './../../services/produtos/'
 
 const router = express.Router()
-router.get('/', landing)
+router.get('/', produtos)
 
 module.exports = router
