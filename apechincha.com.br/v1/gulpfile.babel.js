@@ -1,6 +1,7 @@
 import gulp from 'gulp'
 import sass from 'gulp-sass'
 import babel from 'gulp-babel'
+import gulpcache from 'gulp-cache'
 import autoprefixer from 'autoprefixer'
 import postcss from 'gulp-postcss'
 import cssnano from 'cssnano'
@@ -15,9 +16,14 @@ let bSync = browserSync.create()
 const PATHS = {
     src_scss: './src/public/scss',
     src_js: './src/public/js',
+    src_img: './src/public/img',
+    src_fonts: './src/public/fonts',
     src_node: './src/',
+
     dist_css: './dist/public/css',
     dist_js: './dist/public/js',
+    dist_img: './dist/public/img',
+    dist_fonts: './dist/public/fonts',
     dist_node: './dist/'
 }
 
@@ -45,6 +51,21 @@ gulp.task('babel', () => {
         .pipe(babel({ presets: ['env'] }))
         .pipe(gulp.dest(PATHS.dist_js))
 })
+
+gulp.task('fonts', () => {
+    return gulp.src([
+            path.join('src/public/fonts/**/*')
+        ], { base: './src' })
+        .pipe(gulp.dest(PATHS.dist_node))
+})
+
+gulp.task('images', () => {
+    return gulp.src([
+            path.join('src/public/img/**/*')
+        ], { base: './src' })
+        .pipe(gulp.dest(PATHS.dist_node))
+})
+
 
 gulp.task('babel-server', () => {
     return gulp.src([
@@ -78,7 +99,16 @@ gulp.task('mv-tmpl', () => {
         .pipe(gulp.dest(PATHS.dist_node))
 })
 
-gulp.task('default', ['sass', 'babel', 'mv-tmpl', 'babel-server', 'nodemon'], () => {
+gulp.task('clearCache', function() {
+    // informa o dir que vai limpar o cache ref aos arquivos.
+    //gulp.src('./lib/*.js')
+    //  .pipe(cache.clear());
+
+    // limpa todo o cache
+    gulpcache.clearAll();
+});
+
+gulp.task('default', ['clearCache', 'sass', 'babel', 'mv-tmpl', 'fonts', 'images', 'babel-server', 'nodemon'], () => {
     bSync.init(null, {
         proxy: 'http://localhost:9000',
         port: 3000,
