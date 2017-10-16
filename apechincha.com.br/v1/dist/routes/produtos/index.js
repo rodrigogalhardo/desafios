@@ -16,6 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var router = _express2.default.Router();
 router.get('/', _produtos2.default);
+router.get('/:id/buscar', _produtos2.default);
 router.get('/:id/detalhes', _detalhe_produto2.default);
 
 module.exports = router;

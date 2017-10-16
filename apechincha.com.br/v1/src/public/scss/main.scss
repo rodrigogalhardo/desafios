@@ -1,3 +1,43 @@
+/*
+site-branding-area color
+*/
+
+.site-branding-area-yellow {
+    background-color: #ffc808 !important;
+}
+
+.site-branding-area-purple {
+    background-color: #590a79 !important;
+}
+
+.header-area-purple {
+    background-color: #590a79 !important;
+}
+
+.header-area-yellow {
+    background-color: #ffc808 !important;
+}
+
+.mainmenu-area-yellow {
+    background: none repeat scroll 0 0 #ffff00;
+    color: #000000;
+}
+
+.mainmenu-area-purple {
+    background: none repeat scroll 0 0 #590a79 !important;
+    color: #ffffff;
+}
+
+.mainmenu-area-purple-whiter {
+    background: none repeat scroll 0 0 #68108c !important;
+    color: #ffffff;
+}
+
+
+/*
+* end site brandind
+*/
+
 .floatleft {
     float: left
 }
@@ -52,7 +92,7 @@ body {
 }
 
 .header-area a {
-    color: #888;
+    color: rgb(255, 255, 255);
 }
 
 .user-menu ul {
@@ -109,7 +149,6 @@ body {
 
 .logo h1 {
     font-size: 40px;
-    margin: 30px 0;
     font-weight: 400;
 }
 
@@ -182,7 +221,7 @@ body {
 }
 
 .mainmenu-area ul.navbar-nav li a {
-    color: #6e6a6a;
+    color: #FFF;
     font-size: 14px;
     padding: 20px;
 }
@@ -1436,3 +1475,57 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 .pagination>li>span {
     color: #5a88ca;
 }
+
+//Search bar style
+#custom-search-input {
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input {
+    margin-top: 12px !important;
+}
+
+#custom-search-input input {
+    border: 0;
+    box-shadow: none;
+    color: rgb(128, 0, 128);
+}
+
+#custom-search-input input ::-moz-placeholder {
+    color: rgb(128, 0, 128);
+}
+
+#custom-search-input input ::-webkit-input-placeholder {
+    color: rgb(128, 0, 128);
+}
+
+#custom-search-input input :-ms-input-placeholder {
+    color: rgb(128, 0, 128);
+}
+
+#custom-search-input button {
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #590a79;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #590a79;
+    ;
+}
+
+#custom-search-input button:hover {
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #45075f;
+    ;
+}
+
+#custom-search-input .glyphicon-search {
+    font-size: 23px;
+}
+
+// end serach bar style
