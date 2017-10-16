@@ -4,6 +4,6 @@ import detalhes_produtos from './../../services/produtos/detalhe_produto'
 
 const router = express.Router()
 router.get('/', produtos)
-router.get('/produtos/detalhe-produto/:id', detalhes_produtos)
+router.get('/:id/detalhes', detalhes_produtos)
 
 module.exports = router
