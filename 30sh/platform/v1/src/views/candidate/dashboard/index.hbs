@@ -1,0 +1,64 @@
+<div class="section breadcrumb-bar  solid-red-bg">
+    <div class="inner">
+        <div class="container">
+            <div class="breadcrumb-menu flex items-center no-column">
+                <img src="/img/candidate06.jpg" alt="avatar" class="img-responsive">
+                <div class="breadcrumb-info-dashboard">
+                    <h2>Mark Anderson</h2>
+                    <h4>UI/UX designer</h4>
+                </div>
+                <!-- end .candidate-info -->
+            </div>
+            <!-- end .breadcrumb-menu -->
+        </div>
+        <!-- end .container -->
+    </div>
+    <!-- end .inner -->
+</div>
+
+<div class="section candidate-dashboard-content solid-light-grey-bg">
+    <div class="inner">
+        <div class="container">
+            <div class="candidate-dashboard-wrapper flex space-between no-wrap">
+
+                <!-- start #left-sidebar-menu -->
+                {{> candidate/dashboard/c-left-sidebar-menu }}
+                <!-- end .left-sidebar-menu -->
+
+                <div class="right-side-content">
+                    <div class="tab-content candidate-dashboard">
+                        <!-- start #bookmarked-jobs-tab -->
+                        {{> candidate/dashboard/bookmarked-jobs }}
+                        <!-- end #bookmarked-jobs-tab -->
+
+                        <!-- start #job-alerts-tab -->
+                        {{> candidate/dashboard/job-alerts }}
+                        <!-- end #job-alerts-tab -->
+
+                        <!-- start #manage-applications-tab -->
+                        {{> candidate/dashboard/manage-applications }}
+                        <!-- end #manage-applications-tab -->
+
+                        <!-- start #notifications-tab -->
+                        {{> candidate/dashboard/notifications }}
+                        <!-- end #notifications-tab -->
+
+                        <!-- start #resume-tab -->
+                        {{> candidate/dashboard/resume }}
+                        <!-- end #resume-tab -->
+
+                        <!-- start #chage-password-tab -->
+                        {{> candidate/dashboard/change-password }}
+                        <!-- end #change-password-tab -->
+
+                    </div>
+                    <!-- end .candidate-dashboard -->
+                </div>
+                <!-- end .right-side-content -->
+            </div>
+            <!-- end .candidate-dashboard-wrapper -->
+        </div>
+        <!-- end .container -->
+    </div>
+    <!-- end .inner -->
+</div>
